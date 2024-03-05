@@ -371,6 +371,42 @@
                 <artifactId>xianzhi-redis-spring-boot-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>io.xianzhi.boot</groupId>
+                <artifactId>xianzhi-alipay-spring-boot-starter</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.xianzhi.boot</groupId>
+                <artifactId>xianzhi-aliyun-oss-spring-boot-starter</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.xianzhi.boot</groupId>
+                <artifactId>xianzhi-aliyun-sms-spring-boot-starter</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.xianzhi.boot</groupId>
+                <artifactId>xianzhi-dingtalk-spring-boot-starter</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.xianzhi.boot</groupId>
+                <artifactId>xianzhi-email-spring-boot-starter</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.xianzhi.boot</groupId>
+                <artifactId>xianzhi-tencent-oss-spring-boot-starter</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.xianzhi.boot</groupId>
+                <artifactId>xianzhi-tencent-sms-spring-boot-starter</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
 
 
             <dependency>
