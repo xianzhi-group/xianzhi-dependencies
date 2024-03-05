@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>io.xianzhi</groupId>
+        <artifactId>xianzhi-dependencies</artifactId>
+        <version>1.0.0</version>
+    </parent>
+    <name>XianZhi common</name>
+    <description>Some modules of public code or tool classes</description>
+    <url>https://github.com/xianzhi-group/xianzhi-dependencies</url>
+    <inceptionYear>2024</inceptionYear>
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <id>Ethan Wang</id>
+            <name>Ethan Wang</name>
+            <email>max@xianzhi.io</email>
+            <roles>
+                <role>Developer</role>
+                <role>Tech Leader</role>
+            </roles>
+        </developer>
+    </developers>
+    <scm>
+        <connection>scm:git:git://github.com/xianzhi-group/xianzhi-dependencies</connection>
+        <developerConnection>scm:git:git://github.com/xianzhi-group/xianzhi-dependencies</developerConnection>
+        <url>https://github.com/xianzhi-group/xianzhi-dependencies</url>
+    </scm>
+    <organization>
+        <name>XianZhi Group</name>
+        <url>https://github.com/xianzhi-group</url>
+    </organization>
+    <issueManagement>
+        <system>GitHub Issues</system>
+        <url>https://github.com/xianzhi-group/xianzhi-dependencies/issues</url>
+    </issueManagement>
+
+    <groupId>io.xianzhi.common</groupId>
+    <artifactId>xianzhi-common</artifactId>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.fastjson2</groupId>
+            <artifactId>fastjson2</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.fastjson2</groupId>
+            <artifactId>fastjson2-extension</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.fastjson2</groupId>
+            <artifactId>fastjson2-extension-spring6</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>
