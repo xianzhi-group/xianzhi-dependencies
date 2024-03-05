@@ -332,6 +332,21 @@
                 <version>${project.version}</version>
             </dependency>
             <dependency>
+                <groupId>io.xianzhi</groupId>
+                <artifactId>xianzhi-oss</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.xianzhi</groupId>
+                <artifactId>xianzhi-pay</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.xianzhi</groupId>
+                <artifactId>xianzhi-sms</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>io.xianzhi.boot</groupId>
                 <artifactId>xianzhi-spring-boot-starter-parent</artifactId>
                 <version>${project.version}</version>
