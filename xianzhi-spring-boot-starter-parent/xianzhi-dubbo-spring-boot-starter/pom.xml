@@ -25,9 +25,11 @@
         <version>1.0.0</version>
         <relativePath>../../pom.xml</relativePath>
     </parent>
-    <name>xianzhi-web-spring-boot-starter-parent</name>
-    <description>On the basis of Spring Boot web, some encapsulation has been carried out</description>
+    <name>xianzhi-dubbo-spring-boot-starter</name>
+    <description>On the basis of dubbo Spring Boot, some encapsulation has been carried out</description>
 
+    <groupId>io.xianzhi.boot</groupId>
+    <artifactId>xianzhi-dubbo-spring-boot-starter</artifactId>
     <url>https://github.com/xianzhi-group/xianzhi-dependencies</url>
     <inceptionYear>2024</inceptionYear>
     <licenses>
@@ -61,9 +63,6 @@
         <system>GitHub Issues</system>
         <url>https://github.com/xianzhi-group/xianzhi-dependencies/issues</url>
     </issueManagement>
-    <groupId>io.xianzhi.boot</groupId>
-    <artifactId>xianzhi-web-spring-boot-starter-parent</artifactId>
-
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
@@ -71,12 +70,12 @@
     </properties>
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
             <groupId>io.xianzhi.common</groupId>
             <artifactId>xianzhi-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
         </dependency>
     </dependencies>
 

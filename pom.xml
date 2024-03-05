@@ -45,9 +45,12 @@
     <modules>
         <module>xianzhi-common</module>
         <module>xianzhi-spring-boot-starter-parent</module>
-        <module>xianzhi-spring-boot-starter-parent/xianzhi-web-spring-boot-starter-parent</module>
+        <module>xianzhi-spring-boot-starter-parent/xianzhi-web-spring-boot-starter</module>
         <module>xianzhi-spring-boot-starter-parent/xianzhi-mybatis-plus-spring-boot-starter</module>
         <module>xianzhi-spring-boot-starter-parent/xianzhi-redis-spring-boot-starter</module>
+        <module>xianzhi-spring-boot-starter-parent/xianzhi-log4j2-spring-boot-starter</module>
+        <module>xianzhi-spring-boot-starter-parent/xianzhi-dubbo-spring-boot-starter</module>
+        <module>xianzhi-spring-boot-starter-parent/xianzhi-security-spring-boot-starter</module>
     </modules>
 
     <properties>
@@ -323,6 +326,28 @@
                 <artifactId>xianzhi-spring-boot-starter-parent</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>io.xianzhi.boot</groupId>
+                <artifactId>xianzhi-web-spring-boot-starter</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.xianzhi.boot</groupId>
+                <artifactId>xianzhi-log4j2-spring-boot-starter</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.xianzhi.boot</groupId>
+                <artifactId>xianzhi-mybatis-plus-spring-boot-starter</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.xianzhi.boot</groupId>
+                <artifactId>xianzhi-redis-spring-boot-starter</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+
             <dependency>
                 <groupId>org.apache.activemq</groupId>
                 <artifactId>activemq-amqp</artifactId>
