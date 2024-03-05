@@ -59,6 +59,8 @@
         <module>xianzhi-oss</module>
         <module>xianzhi-pay</module>
         <module>xianzhi-spring-boot-starter-parent/xianzhi-dingtalk-spring-boot-starter</module>
+        <module>xianzhi-spring-boot-starter-parent/xianzhi-tencent-oss-spring-boot-starter</module>
+        <module>xianzhi-spring-boot-starter-parent/xianzhi-tencent-sms-spring-boot-starter</module>
     </modules>
 
     <properties>
