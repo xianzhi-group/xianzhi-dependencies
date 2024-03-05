@@ -51,6 +51,14 @@
         <module>xianzhi-spring-boot-starter-parent/xianzhi-log4j2-spring-boot-starter</module>
         <module>xianzhi-spring-boot-starter-parent/xianzhi-dubbo-spring-boot-starter</module>
         <module>xianzhi-spring-boot-starter-parent/xianzhi-security-spring-boot-starter</module>
+        <module>xianzhi-spring-boot-starter-parent/xianzhi-aliyun-oss-spring-boot-starter</module>
+        <module>xianzhi-spring-boot-starter-parent/xianzhi-aliyun-sms-spring-boot-starter</module>
+        <module>xianzhi-spring-boot-starter-parent/xianzhi-email-spring-boot-starter</module>
+        <module>xianzhi-spring-boot-starter-parent/xianzhi-alipay-spring-boot-starter</module>
+        <module>xianzhi-sms</module>
+        <module>xianzhi-oss</module>
+        <module>xianzhi-pay</module>
+        <module>xianzhi-spring-boot-starter-parent/xianzhi-dingtalk-spring-boot-starter</module>
     </modules>
 
     <properties>
