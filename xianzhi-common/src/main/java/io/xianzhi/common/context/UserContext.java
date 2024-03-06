@@ -43,7 +43,7 @@ public class UserContext {
         if (null == userBO) {
             throw new BizException(CommonCode.UNAUTHORIZED);
         }
-        return userBO.getUserId();
+        return userBO.getId();
     }
 
     /**

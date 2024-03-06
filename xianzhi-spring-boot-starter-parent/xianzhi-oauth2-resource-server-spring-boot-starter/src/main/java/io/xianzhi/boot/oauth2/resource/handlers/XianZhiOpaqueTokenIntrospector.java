@@ -23,7 +23,9 @@ package io.xianzhi.boot.oauth2.resource.handlers;
  * @since 1.0.0
  */
 
+import io.xianzhi.boot.oauth2.resource.OAuth2UserDetails;
 import io.xianzhi.boot.oauth2.resource.exception.OAuth2Exception;
+import io.xianzhi.boot.security.constants.SecurityConstant;
 import io.xianzhi.common.code.CommonCode;
 import io.xianzhi.common.context.UserBO;
 import io.xianzhi.common.context.UserContext;
@@ -52,7 +54,7 @@ public class XianZhiOpaqueTokenIntrospector implements OpaqueTokenIntrospector {
      * 资源服务器接口
      */
     @Resource
-    private RedisTemplate<String,Object>  authorizationInfoRedisTemplate;
+    private RedisTemplate<String, Object> authorizationInfoRedisTemplate;
 
     /**
      * jwt解码器
@@ -74,12 +76,16 @@ public class XianZhiOpaqueTokenIntrospector implements OpaqueTokenIntrospector {
         if (StringUtils.hasText(token)) {
             try {
                 Jwt jwt = jwtDecoder.decode(token);
-                authorizationInfoRedisTemplate.opsForValue().get(jwt.getClaimAsString("id"));
-                UserBO authorizationInfo = authorizationHandler.getAuthorizationCacheByUserId(jwt.getClaimAsString(SystemConstant.ID))
-                        .orElseThrow(() -> new OAuth2Exception(CommonCode.UNAUTHORIZED));
-                String id = authorizationInfo.getId();
-                WebUtils.getRequest().getParameterNames()
-                OAuth2UserDetails userDetails = (OAuth2UserDetails) authorizationInfo;
+                String id = jwt.getClaimAsString("id");
+                if (StringUtils.hasText(id)) {
+                    throw new OAuth2Exception(CommonCode.UNAUTHORIZED);
+                }
+                // 这里是链接授权服务的redis，获取用户信息
+                UserBO userBO = (UserBO) authorizationInfoRedisTemplate.opsForValue().get(String.format(SecurityConstant.AUTHORIZATION_INFO_CACHE_KEY, id));
+                if (userBO == null) {
+                    throw new OAuth2Exception(CommonCode.UNAUTHORIZED);
+                }
+                OAuth2UserDetails userDetails = (OAuth2UserDetails) userBO;
                 // 设置用户上下文
                 UserContext.set(userDetails);
                 return userDetails;

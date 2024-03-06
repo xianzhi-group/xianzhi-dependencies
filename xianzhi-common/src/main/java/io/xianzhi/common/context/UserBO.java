@@ -29,5 +29,5 @@ public interface UserBO {
      *
      * @return user id
      */
-    String getUserId();
+    String getId();
 }
