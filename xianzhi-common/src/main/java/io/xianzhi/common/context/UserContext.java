@@ -46,7 +46,20 @@ public class UserContext {
         return userBO.getUserId();
     }
 
+    /**
+     * Get the current user
+     *
+     * @return current user
+     */
+    public static UserBO get() {
+        return USER_BO_THREAD_LOCAL.get();
+    }
 
+    /**
+     * Set the current user
+     *
+     * @param userBO current user
+     */
     public static void set(UserBO userBO) {
         USER_BO_THREAD_LOCAL.set(userBO);
     }

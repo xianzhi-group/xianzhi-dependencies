@@ -1,4 +1,4 @@
-package io.xianzhi.boot.security.properties.code;
+package io.xianzhi.boot.security.code;
 
 import io.xianzhi.common.result.Result;
 import lombok.AllArgsConstructor;

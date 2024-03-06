@@ -16,11 +16,39 @@
 
 package io.xianzhi.boot.security.properties;
 
+import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * security properties<br>
  *
  * @author Ethan Wang
  * @since 1.1.0
  */
+@Data
+@Slf4j
+@ConfigurationProperties(prefix = "xianzhi.security")
 public class SecurityProperties {
+
+    /**
+     * token过期时间，单位是小时
+     */
+    private Integer tokenExpire = 2;
+
+    /**
+     * 刷新token过期时间，单位是小时
+     */
+    private Integer refreshTokenExpire = tokenExpire * 2;
+
+    /**
+     * 放行地址，白名单 即不用登录即可访问的资源
+     */
+    private List<String> permitAllList = new ArrayList<>();
+
+
+
 }

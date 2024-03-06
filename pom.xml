@@ -61,6 +61,8 @@
         <module>xianzhi-spring-boot-starter-parent/xianzhi-dingtalk-spring-boot-starter</module>
         <module>xianzhi-spring-boot-starter-parent/xianzhi-tencent-oss-spring-boot-starter</module>
         <module>xianzhi-spring-boot-starter-parent/xianzhi-tencent-sms-spring-boot-starter</module>
+        <module>xianzhi-spring-boot-starter-parent/xianzhi-oauth2-authorization-server-spring-boot-starter</module>
+        <module>xianzhi-spring-boot-starter-parent/xianzhi-oauth2-resource-server-spring-boot-starter</module>
     </modules>
 
     <properties>
@@ -269,9 +271,27 @@
         <rocketmq.boot.version>2.2.3</rocketmq.boot.version>
         <!--        hutool -->
         <hutool.all.version>5.8.25</hutool.all.version>
+        <spring.cloud.version>2023.0.0</spring.cloud.version>
+        <spring.cloud.alibaba.version>2022.0.0.0</spring.cloud.alibaba.version>
     </properties>
     <dependencyManagement>
         <dependencies>
+            <!--            spring cloud-->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring.cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!--            spring cloud alibaba-->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring.cloud.alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
             <!--            hutool -->
             <dependency>
                 <groupId>cn.hutool</groupId>
@@ -329,84 +349,103 @@
             <dependency>
                 <groupId>io.xianzhi.common</groupId>
                 <artifactId>xianzhi-common</artifactId>
-                <version>${project.version}</version>
+                <version>1.0.0</version>
             </dependency>
             <dependency>
                 <groupId>io.xianzhi</groupId>
                 <artifactId>xianzhi-oss</artifactId>
-                <version>${project.version}</version>
+                <version>1.0.0</version>
             </dependency>
             <dependency>
                 <groupId>io.xianzhi</groupId>
                 <artifactId>xianzhi-pay</artifactId>
-                <version>${project.version}</version>
+                <version>1.0.0</version>
             </dependency>
             <dependency>
                 <groupId>io.xianzhi</groupId>
                 <artifactId>xianzhi-sms</artifactId>
-                <version>${project.version}</version>
+                <version>1.0.0</version>
             </dependency>
             <dependency>
                 <groupId>io.xianzhi.boot</groupId>
                 <artifactId>xianzhi-spring-boot-starter-parent</artifactId>
-                <version>${project.version}</version>
+                <version>1.0.0</version>
             </dependency>
             <dependency>
                 <groupId>io.xianzhi.boot</groupId>
                 <artifactId>xianzhi-web-spring-boot-starter</artifactId>
-                <version>${project.version}</version>
+                <version>1.0.0</version>
             </dependency>
             <dependency>
                 <groupId>io.xianzhi.boot</groupId>
                 <artifactId>xianzhi-log4j2-spring-boot-starter</artifactId>
-                <version>${project.version}</version>
+                <version>1.0.0</version>
             </dependency>
             <dependency>
                 <groupId>io.xianzhi.boot</groupId>
                 <artifactId>xianzhi-mybatis-plus-spring-boot-starter</artifactId>
-                <version>${project.version}</version>
+                <version>1.0.0</version>
+            </dependency>
+            <dependency>
+                <groupId>io.xianzhi.boot</groupId>
+                <artifactId>xianzhi-oauth2-authorization-server-spring-boot-starter</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+            <dependency>
+                <groupId>io.xianzhi.boot</groupId>
+                <artifactId>xianzhi-oauth2-resource-server-spring-boot-starter</artifactId>
+                <version>1.0.0</version>
             </dependency>
             <dependency>
                 <groupId>io.xianzhi.boot</groupId>
                 <artifactId>xianzhi-redis-spring-boot-starter</artifactId>
-                <version>${project.version}</version>
+                <version>1.0.0</version>
+            </dependency>
+            <dependency>
+                <groupId>io.xianzhi.boot</groupId>
+                <artifactId>xianzhi-security-spring-boot-starter</artifactId>
+                <version>1.0.0</version>
             </dependency>
             <dependency>
                 <groupId>io.xianzhi.boot</groupId>
                 <artifactId>xianzhi-alipay-spring-boot-starter</artifactId>
-                <version>${project.version}</version>
+                <version>1.0.0</version>
             </dependency>
             <dependency>
                 <groupId>io.xianzhi.boot</groupId>
                 <artifactId>xianzhi-aliyun-oss-spring-boot-starter</artifactId>
-                <version>${project.version}</version>
+                <version>1.0.0</version>
             </dependency>
             <dependency>
                 <groupId>io.xianzhi.boot</groupId>
                 <artifactId>xianzhi-aliyun-sms-spring-boot-starter</artifactId>
-                <version>${project.version}</version>
+                <version>1.0.0</version>
             </dependency>
             <dependency>
                 <groupId>io.xianzhi.boot</groupId>
                 <artifactId>xianzhi-dingtalk-spring-boot-starter</artifactId>
-                <version>${project.version}</version>
+                <version>1.0.0</version>
+            </dependency>
+            <dependency>
+                <groupId>io.xianzhi.boot</groupId>
+                <artifactId>xianzhi-dubbo-spring-boot-starter</artifactId>
+                <version>1.0.0</version>
             </dependency>
             <dependency>
                 <groupId>io.xianzhi.boot</groupId>
                 <artifactId>xianzhi-email-spring-boot-starter</artifactId>
-                <version>${project.version}</version>
+                <version>1.0.0</version>
             </dependency>
             <dependency>
                 <groupId>io.xianzhi.boot</groupId>
                 <artifactId>xianzhi-tencent-oss-spring-boot-starter</artifactId>
-                <version>${project.version}</version>
+                <version>1.0.0</version>
             </dependency>
             <dependency>
                 <groupId>io.xianzhi.boot</groupId>
                 <artifactId>xianzhi-tencent-sms-spring-boot-starter</artifactId>
-                <version>${project.version}</version>
+                <version>1.0.0</version>
             </dependency>
-
 
 
             <dependency>
