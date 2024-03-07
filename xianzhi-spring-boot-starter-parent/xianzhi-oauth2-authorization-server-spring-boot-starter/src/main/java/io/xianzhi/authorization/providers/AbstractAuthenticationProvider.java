@@ -18,6 +18,7 @@ package io.xianzhi.authorization.providers;
 
 import io.xianzhi.authorization.token.AbstractBaseAuthenticationToken;
 import io.xianzhi.authorization.utils.OAuth2Assert;
+import io.xianzhi.boot.oauth2.resource.code.OAuth2Code;
 import io.xianzhi.boot.oauth2.resource.exception.OAuth2Exception;
 import io.xianzhi.common.code.CommonCode;
 import lombok.Getter;
