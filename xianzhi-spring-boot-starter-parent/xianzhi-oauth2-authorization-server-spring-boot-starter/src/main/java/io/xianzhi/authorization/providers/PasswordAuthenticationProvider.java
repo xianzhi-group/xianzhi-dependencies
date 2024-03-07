@@ -19,6 +19,7 @@ package io.xianzhi.authorization.providers;
 import com.alibaba.fastjson2.JSON;
 import io.xianzhi.authorization.enums.GrantTypeEnum;
 import io.xianzhi.authorization.token.PasswordAuthenticationToken;
+import io.xianzhi.boot.oauth2.resource.code.OAuth2Code;
 import io.xianzhi.boot.oauth2.resource.exception.OAuth2Exception;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.AbstractAuthenticationToken;

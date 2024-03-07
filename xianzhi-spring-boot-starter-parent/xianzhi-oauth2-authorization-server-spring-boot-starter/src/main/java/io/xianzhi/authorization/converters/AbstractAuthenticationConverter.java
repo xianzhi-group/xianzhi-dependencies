@@ -18,6 +18,7 @@ package io.xianzhi.authorization.converters;
 
 import io.xianzhi.authorization.token.AbstractBaseAuthenticationToken;
 import io.xianzhi.authorization.utils.OAuth2EndpointUtils;
+import io.xianzhi.boot.oauth2.resource.code.OAuth2Code;
 import io.xianzhi.boot.oauth2.resource.exception.OAuth2Exception;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.security.core.Authentication;
