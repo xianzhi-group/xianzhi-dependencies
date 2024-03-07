@@ -34,5 +34,12 @@
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+    <dependencies>
+        <dependency>
+            <groupId>io.xianzhi</groupId>
+            <artifactId>xianzhi-oss</artifactId>
+        </dependency>
+    </dependencies>
+
 
 </project>
