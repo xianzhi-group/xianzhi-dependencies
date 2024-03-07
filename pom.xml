@@ -79,6 +79,7 @@
         <module>xianzhi-spring-boot-starter-parent/xianzhi-tencent-sms-spring-boot-starter</module>
         <module>xianzhi-spring-boot-starter-parent/xianzhi-oauth2-authorization-server-spring-boot-starter</module>
         <module>xianzhi-spring-boot-starter-parent/xianzhi-oauth2-resource-server-spring-boot-starter</module>
+        <module>xianzhi-spring-boot-starter-parent/xianzhi-wechatpay-spring-boot-starter</module>
     </modules>
 
     <properties>
@@ -460,6 +461,11 @@
             <dependency>
                 <groupId>io.xianzhi.boot</groupId>
                 <artifactId>xianzhi-tencent-sms-spring-boot-starter</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+            <dependency>
+                <groupId>io.xianzhi.boot</groupId>
+                <artifactId>xianzhi-wechatpay-spring-boot-starter</artifactId>
                 <version>1.0.0</version>
             </dependency>
 
