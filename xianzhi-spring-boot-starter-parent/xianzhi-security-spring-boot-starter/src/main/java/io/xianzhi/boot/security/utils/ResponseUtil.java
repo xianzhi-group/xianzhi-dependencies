@@ -18,6 +18,7 @@ package io.xianzhi.boot.security.utils;
 
 
 import com.alibaba.fastjson2.JSON;
+import com.alibaba.fastjson2.JSONWriter;
 import io.xianzhi.common.result.Result;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
@@ -41,7 +42,7 @@ public class ResponseUtil {
             // 设置响应头和字符编码
             response.setContentType("application/json;charset=UTF-8");
             // 将JSON字符串写入响应体中
-            response.getWriter().write(JSON.toJSONString(result));
+            response.getWriter().write(JSON.toJSONString(result, JSONWriter.Feature.WriteMapNullValue, JSONWriter.Feature.WriteNullListAsEmpty));
         } catch (Exception e) {
             log.error(e.getMessage(), e);
             throw new RuntimeException(e);

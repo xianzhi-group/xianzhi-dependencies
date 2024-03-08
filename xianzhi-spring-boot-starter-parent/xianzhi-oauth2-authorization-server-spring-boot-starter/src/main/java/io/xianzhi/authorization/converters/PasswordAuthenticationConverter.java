@@ -26,6 +26,7 @@ import io.xianzhi.authorization.utils.OAuth2EndpointUtils;
 import io.xianzhi.boot.oauth2.resource.exception.OAuth2Exception;
 import io.xianzhi.common.code.CommonCode;
 import jakarta.servlet.http.HttpServletRequest;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
 import org.springframework.security.core.Authentication;
@@ -45,6 +46,7 @@ import java.util.Set;
  * @author Ethan Wang
  * @since 1.0.0
  */
+@Slf4j
 public class PasswordAuthenticationConverter extends AbstractAuthenticationConverter {
 
 
@@ -73,17 +75,20 @@ public class PasswordAuthenticationConverter extends AbstractAuthenticationConve
             try {
                 JSONObject userDetails = JSON.parseObject(request.getInputStream());
                 if (null == userDetails) {
-                    throw new OAuth2Exception(CommonCode.ERROR);
+                    log.error("用户名密码登录失败，没有传递请求体");
+                    throw new OAuth2Exception(CommonCode.PARAMETER_CHECK_FAILED);
                 }
                 if (StringUtils.hasText(userDetails.getString(OAuth2ParameterNames.USERNAME))) {
                     additionalParameters.put(OAuth2ParameterNames.USERNAME, userDetails.get("username"));
                 } else {
-                    throw new OAuth2Exception(CommonCode.ERROR);
+                    log.error("用户名密码登录失败，没有传递用户名");
+                    throw new OAuth2Exception(CommonCode.PARAMETER_CHECK_FAILED);
                 }
                 if (StringUtils.hasText(userDetails.getString(OAuth2ParameterNames.PASSWORD))) {
                     additionalParameters.put(OAuth2ParameterNames.PASSWORD, userDetails.get("password"));
                 } else {
-                    throw new OAuth2Exception(CommonCode.ERROR);
+                    log.error("用户名密码登录失败，没有传递密码");
+                    throw new OAuth2Exception(CommonCode.PARAMETER_CHECK_FAILED);
                 }
             } catch (IOException e) {
                 throw new RuntimeException(e);
