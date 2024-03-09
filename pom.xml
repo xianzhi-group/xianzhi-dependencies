@@ -3292,7 +3292,7 @@
             <url>https://mvn.xianzhi.io/repository/xianzhi-releases/</url>
         </repository>
         <snapshotRepository>
-            <id>xianzhi-</id>
+            <id>xianzhi</id>
             <url>https://mvn.xianzhi.io/repository/xianzhi-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
