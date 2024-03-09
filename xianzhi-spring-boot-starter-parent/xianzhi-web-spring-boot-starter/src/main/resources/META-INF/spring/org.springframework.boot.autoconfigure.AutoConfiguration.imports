@@ -1,1 +1,2 @@
 io.xianzhi.boot.web.handlers.GlobalExceptionHandler
+io.xianzhi.boot.web.filters.TraceIdFilter

@@ -21,7 +21,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.xianzhi</groupId>
     <artifactId>xianzhi-dependencies</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>xianzhi-dependencies</name>
     <description>Project dependencies</description>
@@ -371,17 +371,17 @@
             <dependency>
                 <groupId>io.xianzhi</groupId>
                 <artifactId>xianzhi-oss</artifactId>
-                <version>1.0.0</version>
+                <version>1.0.0-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>io.xianzhi</groupId>
                 <artifactId>xianzhi-pay</artifactId>
-                <version>1.0.0</version>
+                <version>1.0.0-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>io.xianzhi</groupId>
                 <artifactId>xianzhi-sms</artifactId>
-                <version>1.0.0</version>
+                <version>1.0.0-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>io.xianzhi.boot</groupId>
@@ -3261,15 +3261,15 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <groupId>org.sonatype.central</groupId>
-                <artifactId>central-publishing-maven-plugin</artifactId>
-                <extensions>true</extensions>
-                <configuration>
-                    <publishingServerId>ossrh</publishingServerId>
-                    <tokenAuth>true</tokenAuth>
-                </configuration>
-            </plugin>
+            <!--            <plugin>-->
+            <!--                <groupId>org.sonatype.central</groupId>-->
+            <!--                <artifactId>central-publishing-maven-plugin</artifactId>-->
+            <!--                <extensions>true</extensions>-->
+            <!--                <configuration>-->
+            <!--                    <publishingServerId>ossrh</publishingServerId>-->
+            <!--                    <tokenAuth>true</tokenAuth>-->
+            <!--                </configuration>-->
+            <!--            </plugin>-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-gpg-plugin</artifactId>
@@ -3286,12 +3286,14 @@
             </plugin>
         </plugins>
     </build>
-
     <distributionManagement>
         <repository>
-            <id>ossrh</id>
-            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <id>xianzhi</id>
+            <url>https://mvn.xianzhi.io/repository/xianzhi-releases/</url>
         </repository>
+        <snapshotRepository>
+            <id>xianzhi-</id>
+            <url>https://mvn.xianzhi.io/repository/xianzhi-snapshots/</url>
+        </snapshotRepository>
     </distributionManagement>
-
 </project>
