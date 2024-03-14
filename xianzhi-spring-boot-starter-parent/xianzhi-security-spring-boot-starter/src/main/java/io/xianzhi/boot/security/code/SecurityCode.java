@@ -34,6 +34,10 @@ public enum SecurityCode implements Result {
      * username or password error
      */
     USER_NAME_OR_PASSWORD_ERROR("2001", false, "username.or.password.error"),
+    /**
+     * user not exists
+     */
+    USER_NOT_EXISTS("2002", false, "username.or.password.error"),
 
 
     ;

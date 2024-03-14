@@ -16,6 +16,7 @@
 
 package io.xianzhi.common.result;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import java.util.List;
@@ -27,6 +28,7 @@ import java.util.List;
  * @since 1.0.0
  */
 @Data
+@AllArgsConstructor
 public class ListResult<E> {
 
     /**
